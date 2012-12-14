@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 4, 2011 11:16:52 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.java.web.core.domain.access.Product" table="product" >
+        <id name="productid" type="java.lang.Integer">
+            <column name="productid" />
+            <generator class="identity" />
+        </id>
+        <property name="connstring" type="string">
+            <column name="connstring" length="200" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="isproduction" type="boolean">
+            <column name="isproduction" not-null="true" />
+        </property>
+        <property name="dbusername" type="string">
+            <column name="dbusername" length="100" not-null="true" />
+        </property>
+        <property name="dbpassword" type="string">
+            <column name="dbpassword" length="100" not-null="true" />
+        </property>
+        <property name="isactive" type="boolean">
+            <column name="isactive" not-null="true" />
+        </property>
+        <property name="gipsprodid" type="int">
+            <column name="gipsprodid" not-null="true" />
+        </property>
+        <property name="stylesfolder" type="string">
+            <column name="stylesfolder" length="100" not-null="true" />
+        </property>
+        <set name="product2menuitems" inverse="true" lazy="false">
+            <key>
+                <column name="productid" not-null="true" />
+            </key>
+            <one-to-many class="com.java.web.core.domain.access.Product2menuitem" />
+        </set>
+        <set name="product2themes" inverse="true" lazy="false">
+            <key>
+                <column name="productid" not-null="true" />
+            </key>
+            <one-to-many class="com.java.web.core.domain.access.Product2theme" />
+        </set>
+        <set name="customstyles" inverse="true" lazy="false">
+            <key>
+                <column name="productid" not-null="true" />
+            </key>
+            <one-to-many class="com.java.web.core.domain.access.Customstyle" />
+        </set>
+    </class>
+</hibernate-mapping>

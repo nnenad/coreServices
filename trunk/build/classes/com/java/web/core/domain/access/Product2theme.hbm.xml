@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 4, 2011 11:16:52 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.java.web.core.domain.access.Product2theme" table="product2theme">
+        <composite-id name="id" class="com.java.web.core.domain.access.Product2themeId">
+            <key-property name="productid" type="int">
+                <column name="productid" />
+            </key-property>
+            <key-property name="themeid" type="int">
+                <column name="themeid" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="theme" class="com.java.web.core.domain.access.Theme" update="false" insert="false" fetch="select" lazy="false">
+            <column name="themeid" not-null="true" />
+        </many-to-one>
+        <many-to-one name="product" class="com.java.web.core.domain.access.Product" update="false" insert="false" fetch="select" lazy="false">
+            <column name="productid" not-null="true" />
+        </many-to-one>
+        <property name="isactive" type="boolean">
+            <column name="isactive" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

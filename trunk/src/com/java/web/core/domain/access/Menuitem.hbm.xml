@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 4, 2011 11:16:52 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.java.web.core.domain.access.Menuitem" table="menuitem" >
+        <id name="menuitemid" type="int">
+            <column name="menuitemid" />
+            <generator class="identity" />
+        </id>
+        <property name="menuitemname" type="string">
+            <column name="menuitemname" length="100" not-null="true" />
+        </property>
+        <property name="action" type="string">
+            <column name="menuitemaction" length="100" not-null="true" />
+        </property>
+        <property name="cls" type="string">
+            <column name="cls" length="64" not-null="true"/>
+        </property>
+        <set name="product2menuitems" inverse="true" lazy="false">
+            <key>
+                <column name="menuitemid" not-null="true" />
+            </key>
+            <one-to-many class="com.java.web.core.domain.access.Product2menuitem" />
+        </set>
+        <set name="submenuitems" inverse="true" lazy="false">
+            <key>
+                <column name="menuitemidref" not-null="true" />
+            </key>
+            <one-to-many class="com.java.web.core.domain.access.Menuitem"/>
+        </set>
+        <many-to-one name="menuitem" class="com.java.web.core.domain.access.Menuitem" fetch="select">
+            <column name="menuitemidref" not-null="false" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

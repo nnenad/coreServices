@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="master_gips_mobile"/>
+  <table-filter match-name="theme"/>
+  <table-filter match-name="product"/>
+  <table-filter match-name="product2theme"/>
+  <table-filter match-name="customstyle"/>
+  <table-filter match-name="dbVersion"/>
+  <table-filter match-name="product2menuitem"/>
+  <table-filter match-name="menuitem"/>
+</hibernate-reverse-engineering>

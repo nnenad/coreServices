@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 4, 2011 11:16:52 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.java.web.core.domain.access.Customstyle" table="customstyle" >
+        <id name="styleid" type="int">
+            <column name="styleid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="product" class="com.java.web.core.domain.access.Product" fetch="select">
+            <column name="productid" not-null="true" />
+        </many-to-one>
+        <property name="foldername" type="string">
+            <column name="foldername" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

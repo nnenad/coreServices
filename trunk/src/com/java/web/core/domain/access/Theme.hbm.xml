@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 4, 2011 11:16:52 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.java.web.core.domain.access.Theme" table="theme">
+        <id name="themeid" type="int">
+            <column name="themeid" />
+            <generator class="assigned" />
+        </id>
+        <property name="themename" type="string">
+            <column name="themename" length="100" not-null="true" />
+        </property>
+        <set name="product2themes" inverse="true">
+            <key>
+                <column name="themeid" not-null="true" />
+            </key>
+            <one-to-many class="com.java.web.core.domain.access.Product2theme" />
+        </set>
+    </class>
+</hibernate-mapping>
