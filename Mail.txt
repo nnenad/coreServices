@@ -1,0 +1,18 @@
+Nenade,
+
+Ovo je vise u duhu u kome bi trebalo da bude, medjutim opet ima mnogo problema kako tehnickih tako i sustinskih. Ajmo prvo na sustinu:
+
+1. Fali ti uvodni deo gde ces da opises sta je git. Znaci, tebi ovaj rad pocinje sa (If a server goes down for an hour) a pises o Git-u.
+2. Nigde nisi opisao strukturu git repozitorijuma. Kakve fajlove on kod sebe cuva u kom formatu (Naprimer my sql cuva .dbf fajlove).
+3. Da li git kod sebe u repozitorijumu sadrzi neke konfiguracione fajlove, koji uticu na njegovo ponasanje. Sta sve od alata git poseduje i cemu sluze.
+4. Ovaj deo oko branshinga switchinga i merging treba da bude samo jedno poglavlje u radu recimo - Git repository content metadata (To su u sustini metapodaci sarzaja).
+
+Sto se tice tehnickih stvari:
+
+1. Ni za jednu sliku koju si ubacio u tekst, a slike ti trenutno cine oko 70% rada, nije opisano sta ona predtsavlja. Trebalo bi ispred svake slike da napises "Na ovoj slici se prikaziuje" pa da opises sliku.
+2. Predji na Srpski, mislim da ce ti lakse ici (ovo je samo predlog).
+3. Kada u rad uvedes novi koncept, napisi paragraf o konceptu (recimo ponmenuo si SHA-1).
+4. Numerisi poglavlja. Kada pricamo o tekstu lakse je reci 1.1.1. nego "Basic merging"
+5. Duh tehnickog jezika. Ceo rad treba da bude napisa u tehnickom duhu. Znaci jezik tipa "If a server goes down", "Gip philosophy" itd, nije prihvatljiv.
+
+Srecan rad,
